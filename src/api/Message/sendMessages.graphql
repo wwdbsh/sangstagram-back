@@ -1,0 +1,3 @@
+type Mutation{
+    sendMessages(roomId:String, message:String!, toId:String):Message
+}
