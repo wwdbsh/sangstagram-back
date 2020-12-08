@@ -1,6 +1,6 @@
-# sangstagram v1
+# sangstagram-backend v1
 
-Instagram clone with Express + Prisma + React and React Native
+Backend for Instagram clone with Express + Prisma + GraphQL
 
 ## User Stories
 
