@@ -8,12 +8,14 @@ export default{
             const loginSecret = generateSecret();
             console.log(loginSecret);
             try{
-                await sendSecretMail(email, loginSecret);
+                // await sendSecretMail(email, loginSecret);
                 await prisma.updateUser({data:{loginSecret}, where:{email}});
-                return true;
-            }catch(error){
-                console.log(error);
-                return false;
+                return loginSecret; // temporary logic because it's not using email confirm now
+                // return true; // change to using email confirm later
+            }catch(e){
+                console.log(e);
+                return "";
+                // return false;
             }
         }
     }
