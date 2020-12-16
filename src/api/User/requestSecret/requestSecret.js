@@ -3,7 +3,7 @@ import { generateSecret, sendSecretMail } from "../../../utils";
 
 export default{
     Mutation:{
-        requestSecret: async (_, args, {request}) => {
+        requestSecret: async (_, args) => {
             const { email } = args;
             const loginSecret = generateSecret();
             console.log(loginSecret);
