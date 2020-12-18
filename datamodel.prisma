@@ -1,6 +1,9 @@
 type User {
   id: ID! @id
   avatar:String
+    @default(
+      value:"https://csi518termproject.s3.amazonaws.com/iconmonstr-user-circle-thin-240.png"
+    )
   username:String! @unique
   email:String! @unique
   firstName:String @default(value:"")
