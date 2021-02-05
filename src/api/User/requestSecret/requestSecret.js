@@ -6,16 +6,16 @@ export default{
         requestSecret: async (_, args) => {
             const { email } = args;
             const loginSecret = generateSecret();
-            console.log(loginSecret);
+            // console.log(loginSecret);
             try{
-                // await sendSecretMail(email, loginSecret);
+                await sendSecretMail(email, loginSecret);
                 await prisma.updateUser({data:{loginSecret}, where:{email}});
-                return loginSecret; // temporary logic because it's not using email confirm now
-                // return true; // change to using email confirm later
+                // return loginSecret; // temporary logic because it's not using email confirm now
+                return true; // change to using email confirm later
             }catch(e){
                 console.log(e);
-                return "";
-                // return false;
+                // return "";
+                return false;
             }
         }
     }
