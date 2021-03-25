@@ -106,5 +106,4 @@ dist
 
 .next
 generated
-prisma.yml
 build
